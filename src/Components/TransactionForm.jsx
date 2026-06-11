@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useContext, useState } from "react";
+import { TransactionContext } from "../Store/TransactionContext";
 
 const TransactionForm = () => {
   const expenseCategory = ["food", "shopping", "bills", "travels"];
@@ -33,8 +34,11 @@ const TransactionForm = () => {
     });
   };
 
+  const { transactions, setTransactions } = useContext(TransactionContext);
+
   const handleSubmit = (e) => {
     e.preventDefault();
+    setTransactions([...transactions, transaction]);
     settransaction({
       amount: "",
       category: "food",
