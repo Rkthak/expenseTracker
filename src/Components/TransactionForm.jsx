@@ -3,7 +3,7 @@ import { TransactionContext } from "../Store/TransactionContext";
 
 const TransactionForm = () => {
   const expenseCategory = ["food", "shopping", "bills", "travels"];
-  const incomeCategory = ["salary", "freelance", "business", "investment"];
+  // const incomeCategory = ["salary", "freelance", "business", "investment"];
   const today = new Date().toISOString().split("T")[0];
 
   const [transaction, settransaction] = useState({
@@ -18,14 +18,14 @@ const TransactionForm = () => {
   const ipChange = (e) => {
     const { name, value } = e.target;
 
-    if (name === "transactionType") {
-      settransaction((prev) => ({
-        ...prev,
-        transactionType: value,
-        category: value === "expense" ? expenseCategory[0] : incomeCategory[0],
-      }));
-      return;
-    }
+    // if (name === "transactionType") {
+    //   settransaction((prev) => ({
+    //     ...prev,
+    //     transactionType: value,
+    //     category: value === "expense" ? expenseCategory[0] : incomeCategory[0],
+    //   }));
+    //   return;
+    // }
 
     settransaction({
       ...transaction,
@@ -76,7 +76,7 @@ const TransactionForm = () => {
           >
             {(transaction.transactionType === "expense"
               ? expenseCategory
-              : incomeCategory
+              : "incomeCategory"
             ).map((category, index) => (
               <option value={category} key={index}>
                 {category}
@@ -109,7 +109,7 @@ const TransactionForm = () => {
           />
         </div>
         <div className="mt-6">
-          <select
+          {/* <select
             name="transactionType"
             id="transactionType"
             value={transaction.transactionType}
@@ -118,7 +118,7 @@ const TransactionForm = () => {
           >
             <option value="expense">Expense</option>
             <option value="income">Income</option>
-          </select>
+          </select> */}
         </div>
 
         <div className="mt-6">

@@ -5,7 +5,7 @@ const Logo = () => {
         Expense Tracker
       </h1>
       <p className="text-slate-500 font-['Lato'] text-lg text-[clamp(1rem,2vw,3.5rem)]">
-        Track your income and expense easily.
+        Track expense easily.
       </p>
     </div>
   );

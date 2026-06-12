@@ -4,19 +4,19 @@ import { TransactionContext } from "../Store/TransactionContext";
 const Balance = () => {
   const { transactions } = useContext(TransactionContext);
 
-  const income = transactions
-    .filter((transaction) => transaction.transactionType === "income")
-    .reduce((acc, curr) => acc + Number(curr.amount), 0);
+  // const income = transactions
+  //   .filter((transaction) => transaction.transactionType === "income")
+  //   .reduce((acc, curr) => acc + Number(curr.amount), 0);
 
   const expense = transactions
     .filter((transaction) => transaction.transactionType === "expense")
     .reduce((acc, curr) => acc + Number(curr.amount), 0);
 
-  const balance = income - expense;
+  // const balance = income - expense;
 
   return (
     <div className="grid md:grid-cols-3 gap-8 mt-6">
-      <div className="flex justify-between items-center bg-white p-4 rounded-2xl">
+      {/* <div className="flex justify-between items-center bg-white p-4 rounded-2xl">
         <div className="">
           <p className="text-xs text-slate-500 mb-1 font-['poppins']">
             Total Balance
@@ -41,7 +41,7 @@ const Balance = () => {
         <div className="flex justify-between items-center bg-green-500 p-4 rounded-xl">
           <i className="fa-solid fa-plus text-slate-50 font-['lato']"></i>
         </div>
-      </div>
+      </div> */}
       <div className="flex justify-between items-center bg-white p-4 rounded-2xl">
         <div className="">
           <p className="text-xs text-slate-500 mb-1 font-['poppins']">
