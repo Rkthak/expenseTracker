@@ -1,5 +1,44 @@
 @import "tailwindcss";
 
+
+html {
+  font-size: 16px;
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1280px) {
+  html {
+    font-size: 18px;
+  }
+}
+
+@media (min-width: 1536px) {
+  html {
+    font-size: 20px;
+  }
+}
+
+@media (min-width: 2000px) {
+  html {
+    font-size: 25px;
+  }
+}
+@media (min-width: 3000px) {
+  html {
+    font-size: 32px;
+  }
+}
+@media (min-width: 4000px) {
+  html {
+    font-size: 36px;
+  }
+}
+
 ::-webkit-scrollbar {
   width: 2px;
 }
