@@ -1,8 +1,30 @@
 @import "tailwindcss";
 
-::-webkit-scrollbar {   
-    width: 2px;    
+::-webkit-scrollbar {
+  width: 2px;
 }
 ::-webkit-scrollbar-thumb {
-    background: #4f39f6;
+  background: #4f39f6;
+}
+/* Calendar container */
+.flatpickr-calendar {
+  border-radius: 16px;
+  border: none;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Header */
+.flatpickr-months {
+  background: #4f39f6;
+  color: white;
+  border-radius: 16px 16px 0 0;
+}
+
+.flatpickr-current-month,
+.flatpickr-monthDropdown-months,
+.numInput.cur-year,
+.flatpickr-prev-month,
+.flatpickr-next-month {
+  color: white !important;
+  fill: white !important;
 }
