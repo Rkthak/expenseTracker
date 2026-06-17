@@ -131,7 +131,9 @@ const DisplayTransactions = () => {
                 <div className="flex gap-4 items-center justify-between">
                   <p className="text-lg font-['lato'] font-semibold text-red-500">
                     <i className="fa-solid fa-indian-rupee-sign text-md"></i>
-                    {item.amount}
+                    {Number(item.amount).toString().includes("e")
+                      ? Number(item.amount).toExponential(2)
+                      : Number(item.amount)}
                   </p>
                   <button
                     className="bg-red-500 text-violet-50 px-4 py-1 rounded text-sm font-['poppins']"
