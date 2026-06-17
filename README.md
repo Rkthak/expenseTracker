@@ -2,6 +2,10 @@
 
 CashLens is a smart expense tracking application built with **React JS**, **Tailwind CSS**, and **Chart.js**. It helps users track daily expenses, analyze spending habits, and visualize expense distribution through interactive charts. All data is stored in **localStorage**, ensuring persistence between sessions.
 
+# Live Demo
+
+🚀 https://my-cashlens.netlify.app/
+
 ## 🚀 Features
 
 ### Expense Management
