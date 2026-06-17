@@ -1,4 +1,5 @@
 import Balance from "../Components/Balance";
+import DisplayChart from "../Components/DisplayChart";
 import Header from "../Components/Header";
 import TransactionForm from "../Components/TransactionForm";
 import DisplayTransactions from "../Sections/DisplayTransactions";
@@ -12,6 +13,7 @@ const Dashboard = () => {
         <DisplayTransactions />
         <TransactionForm />
       </div>
+      <DisplayChart />
     </div>
   );
 };
