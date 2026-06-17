@@ -49,8 +49,11 @@ const TransactionForm = () => {
   };
 
   return (
-    <div className="bg-white rounded-2xl shadow-xl p-4" id="transactionForm">
-      <h3 className="text-2xl font-semibold font-['poppins'] capitalize">
+    <div
+      className="bg-white dark:bg-slate-800 rounded-2xl shadow-xl p-4"
+      id="transactionForm"
+    >
+      <h3 className="text-2xl text-slate-900 dark:text-slate-100 font-semibold font-['poppins'] capitalize">
         Add {transaction.transactionType}
       </h3>
       <form className="" onSubmit={handleSubmit}>
@@ -63,7 +66,7 @@ const TransactionForm = () => {
             onChange={ipChange}
             placeholder="Add Amount"
             required
-            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           />
         </div>
         <div className="mt-6 flex gap-8">
@@ -72,7 +75,7 @@ const TransactionForm = () => {
             id="category"
             value={transaction.category}
             onChange={ipChange}
-            className="w-full capitalize p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className="w-full capitalize p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           >
             {(transaction.transactionType === "expense"
               ? expenseCategory
@@ -92,7 +95,7 @@ const TransactionForm = () => {
             max={today}
             placeholder="Add Amount"
             required
-            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           />
         </div>
 
@@ -105,7 +108,7 @@ const TransactionForm = () => {
             onChange={ipChange}
             placeholder="Add Note"
             required
-            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className="w-full p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           />
         </div>
         <div className="mt-6">
@@ -124,7 +127,7 @@ const TransactionForm = () => {
         <div className="mt-6">
           <button
             type="submit"
-            className="w-full p-2 bg-violet-600 rounded-xl font-['poppins'] font-semibold text-slate-50 cursor-pointer"
+            className="w-full p-2 bg-indigo-600 dark:bg-violet-600 rounded-xl font-['poppins'] font-semibold text-slate-50 cursor-pointer"
           >
             Add Expense
           </button>

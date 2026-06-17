@@ -83,8 +83,8 @@ const DisplayChart = () => {
   };
 
   return (
-    <div className="mt-6 bg-white h-full rounded-2xl shadow-xl p-4">
-      <h3 className="text-xl font-semibold font-['poppins'] capitalize">
+    <div className="mt-6 bg-white dark:bg-slate-800 h-full rounded-2xl shadow-xl p-4">
+      <h3 className="text-xl text-slate-900 dark:text-slate-100 font-semibold font-['poppins'] capitalize">
         Category-wise Expenses
       </h3>
 
@@ -92,7 +92,7 @@ const DisplayChart = () => {
         <Pie data={data} options={options} />
       </div>
 
-      <p className="text-slate-500 font-medium font-['poppins']">
+      <p className="text-slate-500 dark:text-slate-300 font-medium font-['poppins']">
         Total = <i className="fa-solid fa-indian-rupee-sign text-md"></i>
         {total}
       </p>

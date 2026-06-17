@@ -42,10 +42,10 @@ const DisplayTransactions = () => {
   };
 
   return (
-    <div className="bg-white h-full rounded-2xl shadow-xl p-4">
+    <div className="bg-white dark:bg-slate-800 h-full rounded-2xl shadow-xl p-4">
       <div className="">
         <div className="flex justify-between items-center">
-          <h3 className="text-xl font-semibold font-['poppins'] capitalize">
+          <h3 className="text-xl text-slate-900 dark:text-slate-100 font-semibold font-['poppins'] capitalize">
             Recent transactions
           </h3>
           <button
@@ -56,7 +56,7 @@ const DisplayTransactions = () => {
               setSearchVal("");
               setSortVal("");
             }}
-            className="px-3 py-2 ml-2 font-['poppins'] font-semibold text-slate-50 bg-black cursor-pointer rounded-xl"
+            className="px-3 py-2 ml-2 font-['poppins'] font-semibold text-slate-50 bg-black dark:bg-white dark:text-slate-900 cursor-pointer rounded-xl"
           >
             Clear filters
           </button>
@@ -66,16 +66,17 @@ const DisplayTransactions = () => {
             type="text"
             placeholder="Search Transaction"
             name="search"
+            id="search"
             value={searchVal}
             onChange={(e) => setSearchVal(e.target.value)}
-            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           />
           <select
             name="category"
             value={category}
             onChange={(e) => setCategory(e.target.value)}
             id="category"
-            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           >
             <option value="all">All</option>
             <option value="food">Food</option>
@@ -88,7 +89,7 @@ const DisplayTransactions = () => {
             id="sort"
             value={sortVal}
             onChange={(e) => setSortVal(e.target.value)}
-            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className=" p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           >
             <option value="">Sort By</option>
             <option value="latest">Latest</option>
@@ -107,7 +108,7 @@ const DisplayTransactions = () => {
             onChange={(selectedDates, dateStr) => {
               setDate(dateStr);
             }}
-            className="p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50"
+            className="p-2 focus:outline-none focus:ring-2 focus:ring-indigo-600 rounded-xl font-['lato'] bg-indigo-50 dark:bg-slate-500 dark:text-slate-100"
           />
         </div>
       </div>
@@ -117,26 +118,26 @@ const DisplayTransactions = () => {
           {filterdTransactions.map((item) => {
             return (
               <div
-                className="bg-violet-50 mt-2 rounded-2xl px-4 py-2 flex flex-col md:flex-row gap-2 justify-between  md:items-center"
+                className="bg-violet-50 dark:bg-slate-500 mt-2 rounded-2xl px-4 py-2 flex flex-col md:flex-row gap-2 justify-between  md:items-center"
                 key={item.id}
               >
                 <div className="">
-                  <p className="capitalize font['lato'] font-medium text-md">
+                  <p className="capitalize font['lato'] text-black dark:text-slate-100 font-medium text-md">
                     {item.note}
                   </p>
-                  <span className="text-sm">
+                  <span className="text-sm text-slate-500 dark:text-slate-100">
                     {item.category} ● {item.date}
                   </span>
                 </div>
                 <div className="flex gap-4 items-center justify-between">
-                  <p className="text-lg font-['lato'] font-semibold text-red-500">
+                  <p className="text-lg font-['lato'] font-semibold text-red-500 dark:text-rose-200">
                     <i className="fa-solid fa-indian-rupee-sign text-md"></i>
                     {Number(item.amount).toString().includes("e")
                       ? Number(item.amount).toExponential(2)
                       : Number(item.amount)}
                   </p>
                   <button
-                    className="bg-red-500 text-violet-50 px-4 py-1 rounded text-sm font-['poppins']"
+                    className="bg-red-500 dark:bg-rose-200 text-violet-50 dark:text-rose-500 px-4 py-1 rounded text-sm font-['poppins'] font-semibold"
                     onClick={() => handledelete(item.id)}
                   >
                     <span className="hidden md:block">Delete</span>

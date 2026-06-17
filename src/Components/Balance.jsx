@@ -42,17 +42,17 @@ const Balance = () => {
           <i className="fa-solid fa-plus text-slate-50 font-['lato']"></i>
         </div>
       </div> */}
-      <div className="flex justify-between items-center bg-white p-4 rounded-2xl">
+      <div className="flex justify-between items-center bg-white dark:bg-slate-800 shadow-xl p-4 rounded-2xl">
         <div className="">
-          <p className="text-xs text-slate-500 mb-1 font-['poppins']">
+          <p className="text-xs text-slate-500 dark:text-slate-400 mb-1 font-['poppins']">
             Expenses
           </p>
-          <h2 className="font-bold text-red-500 text-2xl font-['lato']">
+          <h2 className="font-bold text-red-500 dark:text-rose-200 text-2xl font-['lato']">
             <i className="fa-solid fa-indian-rupee-sign"></i>
             {expense}
           </h2>
         </div>
-        <div className="flex justify-between items-center bg-red-500 p-4 rounded-xl">
+        <div className="flex justify-between items-center bg-red-500 dark:bg-rose-500 p-4 rounded-xl">
           <i className="fa-solid fa-minus text-slate-50 font-['lato']"></i>
         </div>
       </div>
